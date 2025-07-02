@@ -46,3 +46,7 @@ All user queries are passed through **Llama Guard 4** (Groq) for toxicity and ha
 > Try It Out! – [Live Demo on HuggingFace Spaces](https://huggingface.co/spaces/Darsh1234Tayal/Darshs_Web_Answerer_)
 
 ---
+
+## ✨ Connect to me
+
+> Send me an e-mail on darshtayal8@gmail.com
