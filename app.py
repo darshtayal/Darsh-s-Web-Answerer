@@ -86,7 +86,7 @@ def summary_generator(link):
         embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2')  
         db = Chroma.from_texts(chunks,embeddings)
         if (len(ref_cont.split(" ")) * 1.4) >= 12000:
-            ref_cont = "".join(ref_cont.split(" ")[:5000])
+            ref_cont = " ".join(ref_cont.split(" ")[:5000])
         res = invoke_llm(f"Please summarize the following text into 2-3 lines. Give an overview of what it's about. Ignore all the unnessessary website content, focus only on text. Just generate the summary and nothing else, not even here's the summary and all. Here's the text: '{ref_cont}'")
         yield gr.update(visible=False), gr.update(visible=False), gr.update(visible=True), res, gr.update(visible=False), db
     else:
